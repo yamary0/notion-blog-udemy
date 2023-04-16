@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import Navbar from '../Navbar/Navbar'
+import { LayoutOptions } from 'react-markdown/lib/react-markdown'
 
-const Layout = ({children}) => {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout = ({children}: LayoutProps) => {
   return (
     <div>
         <Navbar />
