@@ -12,7 +12,7 @@ const n2m = new NotionToMarkdown({notionClient: notion});
 
 export const getAllPosts = async () => {
 	const posts = await notion.databases.query({
-        database_id: process.env.NOTION_DATABASE_ID,
+        database_id: process.env.NOTION_DATABASE_ID as string,
         page_size: 100,
         filter: {
             property: "Published",
@@ -38,8 +38,8 @@ export const getAllPosts = async () => {
 
 const getPageMetaData = (post) => {
 
-    const getTags = (tags) => {
-        const allTags = tags.map((tag) => {
+    const getTags = (tags: any) => {
+        const allTags = tags.map((tag: any) => {
             return tag.name;
         });
         return allTags;
@@ -55,9 +55,9 @@ const getPageMetaData = (post) => {
     }
 }
 
-export const getSinglePost = async (slug) => {
+export const getSinglePost = async (slug: any) => {
     const response = await notion.databases.query({
-        database_id: process.env.NOTION_DATABASE_ID,
+        database_id: process.env.NOTION_DATABASE_ID as string,
         filter:{
             property: "Slug",
             formula: {
