@@ -1,4 +1,4 @@
-import { NUMBER_OF_POSTS_PER_PAGE } from "@/constants/constants";
+import { NUMBER_OF_POSTS_PER_PAGE } from "../constants/constants";
 import { Client } from "@notionhq/client";
 import exp from "constants";
 import { NotionToMarkdown } from "notion-to-md";

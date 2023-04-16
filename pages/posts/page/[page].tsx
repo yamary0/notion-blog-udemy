@@ -1,9 +1,9 @@
-import Pagination from '@/components/Pagination/Pagination';
+import Pagination from '../../../components/Pagination/Pagination';
 import SinglePost from '../../../components/Post/SinglePost';
 import { getAllPosts, getAllTags, getNumberOfPages, getPostsByPage, getPostsForTopPage } from '../../../lib/notionAPI'
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head'
-import Tag from '@/components/Tag/Tag';
+import Tag from '../../../components/Tag/Tag';
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const numberOfPage = await getNumberOfPages();

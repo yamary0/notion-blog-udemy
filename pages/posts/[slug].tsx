@@ -1,5 +1,5 @@
 import React from 'react'
-import { getAllPosts, getSinglePost } from '@/lib/notionAPI'
+import { getAllPosts, getSinglePost } from '../../lib/notionAPI'
 import ReactMarkdown from 'react-markdown'
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
 import {vscDarkPlus} from 'react-syntax-highlighter/dist/cjs/styles/prism'
